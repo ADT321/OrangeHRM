@@ -1,4 +1,5 @@
 import { Page } from '@playwright/test';
+import logger from '../utils/LoggerUtil';
 import HomePage from './HomePage';
 
 export default class LoginPage {
@@ -20,8 +21,11 @@ export default class LoginPage {
 
     async login(username: string, password: string): Promise<HomePage> {
       await this.usernameInput.fill(username);
+      logger.info(`Username entered: ${username}`);
       await this.passwordInput.fill(password);
+      console.log(`Password entered: ${password}`);
       await this.loginButton.click();
+      console.log('Login button clicked');
       return new HomePage(this.page);
 }}
 

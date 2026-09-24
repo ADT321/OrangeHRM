@@ -11,5 +11,10 @@
   "devDependencies": {
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.3",
+    "moment-timezone": "^0.6.4",
+    "winston": "^3.19.0"
   }
 }
