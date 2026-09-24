@@ -11,6 +11,7 @@ test('Login Test', async ({ page }) => {
   //const homePage = await loginPage.login(process.env.Ausername!, process.env.Apassword!);
   const homePage = await loginPage.login(cdata[0].username, cdata[0].password);
   logger.info('Login successful');
+  logger.info('change commit for auto CICD');
   //await homePage.expectAdminLinkVisible();
 
   //const adminPage = await homePage.navigateToAdmin();
